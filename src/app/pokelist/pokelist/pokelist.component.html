@@ -1,0 +1,40 @@
+<div class="container ">
+
+  <div class="row">
+    <div class="col-md-4" >
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+    </div>
+
+    <div class="col-md-4">
+      <ngb-pagination [pageSize]="100" [collectionSize]="chettas.length" [(page)]="page"
+        aria-label="Default pagination">
+      </ngb-pagination>
+    </div>
+  </div>
+
+  <div class="row ">
+
+    <div class="col-md-4" *ngFor="let nam of chettas 
+        | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize
+        | NamFilter: query 
+          ;let i=index ">
+
+      <div class="profile-card-6" (click)="show(nam)">
+        <img src="../../../assets/{{nam.image}}" class="img img-responsive imgs" alt=" profile-image card">
+        <div class="profile-name">{{ nam.name }}</div>
+        <div class="profile-overview">
+          <div class="profile-overview">
+            <div class=" text-center">
+              <div class="col-md-12 ">
+                <h3>{{ i+1 }}</h3>
+                <p>Rank</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

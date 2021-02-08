@@ -1,0 +1,53 @@
+<!-- <table  class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Specie</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let part of parts;let i=index ">
+        <td>{{ part.name }}</td>
+        <td>{{ part.description }}</td>
+        <td> <img src="../../../assets/{{ part.image }}"  ></td>
+        <td>{{ part.specie }}</td>
+        <td><button class="btn btn-success"   >SHOW</button> </td>
+
+      </tr>
+      
+    </tbody>
+  </table> -->
+
+<!-- <body class="bgm"> -->
+  <!-- <div class="container "> -->
+    <div class="row">
+     
+      <div class="col-md-6 " *ngFor="let nam of parts;let i=index ">
+        <div class="card " >
+          <img class="card-img-top img " src="../../../assets/{{ nam.image }}" alt="Card image cap">
+          <div class="card-body">
+            <!-- <div class="tit">  -->
+            <h5 class="card-title">{{ nam.name }}</h5>
+            <p class="card-text">{{ nam.description }}</p>
+            <!-- <div> -->
+            
+            <h5>Abilities</h5>
+            <p class="card-text">{{ nam.abilities }}</p>
+            <h5>Evalutions</h5>
+            <p class="card-text">{{ nam.evolutions }}</p>
+            <h5>Types</h5>
+            <p class="card-text">{{ nam.types }}</p>
+            <!-- <h5>Stats</h5>
+            <p class="card-text">{{ nam.stats }}</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 chart">
+        <div id="chartdiv"  class="chart1"></div>
+      </div>
+    </div>
+  <!-- </div> -->
+<!-- </body> -->
